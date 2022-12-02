@@ -33,6 +33,10 @@ nav{
 
 }
 
+.button:hover{
+    background-color:#8bfc00a1;
+}
+
 #menu-principal {
     background-color: var(--fond-menu, #000);
     padding-top: 4px;
