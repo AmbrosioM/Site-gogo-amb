@@ -1,38 +1,83 @@
 
-    <form method="post" action="confirmation.html">
-        <fieldset id="#renseignement-auth">
-            <legend>Inscription</legend>
-            <div class="group">
-                <label for="prenom">Prénom</label>
-                <input type="text" name="prenom" id="prenom" required/>
+    <div class="row">
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+      
+              <div class="row">
+                <div class="col-50">
+                  <h3>Adresse de livraison</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Prénom Nom</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Ambroise Miribel">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="ambroise.miribel@example.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                  <label for="city"><i class="fa fa-institution"></i> Ville</label>
+                  <input type="text" id="city" name="city" placeholder="New York">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Pays</label>
+                      <input type="text" id="state" name="state" placeholder="NY">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Code postale</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  <h3>Payement</h3>
+                
+                  <label for="cname">Nom de la carte</label>
+                  <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                  <label for="ccnum">Numéro de carte</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Expiration mois</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="September">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">année</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+
+              <div class="group submit-group">
+                <input type="submit" value="Soumettre" class="button" href="#/recapitulatif">
             </div>
-            <div class="group">
-                <label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" required/>
-            </div>
-            <div class="group">
-                <label for="courriel">Adresse courriel</label>
-                <input type="email" name="courriel" id="courriel" required/>
-            </div>
-            <div class="group">
-                <label for="mot-de-passe">Mot de passe</label>
-                <input type="password" name="mot-de-passe" id="mot-de-passe" required/>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Renseignements d'inscription</legend>
-            <div class="group">
-                <label for="type-abonnement">Type d'abonnement</label>
-                <select name="type-abonnement" id="type-abonnement">
-                    <option value="1">Basique</option>
-                    <option value="2">Premium</option>
-                    <option value="3">Entraîneur</option>
-                </select>
-            </div>
-        </fieldset>
-        <div class="group submit-group">
-            <input type="submit" value="Soumettre" class="button" href="#/recapitulatif">
+            </form>
+          </div>
         </div>
+      
+        <div class="col-25">
+          <div class="container">
+            <h4>Cart
+              <span class="price" style="color:black">
+                <i class="fa fa-shopping-cart"></i>
+                <b>4</b>
+              </span>
+            </h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+          </div>
+        </div>
+      </div>
+
+
     </form>
     <div>
         <a class="button1" href="#/panier"><strong>Retour</strong></a>

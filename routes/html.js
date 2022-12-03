@@ -33,12 +33,6 @@ router.get('/payer', function(req, res){
     res.sendFile(path.join(__dirname + '/../client/payer.html'));
 });
 
-router.get('/recapitulatif', function(req,res){
-    res.sendFile(path.join(__dirname + '/../client/recapitulatif.html'))
-})
 
-router.get('/confirmation', function(req,res){
-    res.sendFile(path.join(__dirname + '/../client/confirmation.html'))
-})
 
 module.exports = router
