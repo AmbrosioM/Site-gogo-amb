@@ -46,6 +46,9 @@ nav{
     border-radius: 2rem;
 
 }
+.table1{
+    width: 100%;
+}
 
 .button:hover{
     background-color:#8bfc00a1;

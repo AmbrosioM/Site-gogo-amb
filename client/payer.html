@@ -1,17 +1,15 @@
-
+<section class="mt2-container">
     <div class="row">
         <div class="col-75">
           <div class="container">
-            <form action="/action_page.php">
-      
               <div class="row">
                 <div class="col-50">
                   <h3>Adresse de livraison</h3>
                   <label for="fname"><i class="fa fa-user"></i> Prénom Nom</label>
                   <input type="text" id="fname" name="firstname" placeholder="Ambroise Miribel">
-                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <label for="email"><i class="fa fa-envelope"></i> Courriel</label>
                   <input type="text" id="email" name="email" placeholder="ambroise.miribel@example.com">
-                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Addresse</label>
                   <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
                   <label for="city"><i class="fa fa-institution"></i> Ville</label>
                   <input type="text" id="city" name="city" placeholder="New York">
@@ -53,8 +51,8 @@
               </div>
 
               <div class="group submit-group">
-                <input type="submit" value="Soumettre" class="button" href="#/recapitulatif">
-                <a class ="button" value="Soumettre" href="#/recapitulatif"></a>
+                
+                <a class ="button" href="#/recapitulatif"><strong>Soumettre</strong></a>
             </div>
             </form>
           </div>
@@ -65,21 +63,28 @@
             <h4>Cart
               <span class="price" style="color:black">
                 <i class="fa fa-shopping-cart"></i>
-                <b>4</b>
               </span>
             </h4>
-            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-            <hr>
-            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            <div class="col-md-10">
+                <table class="table1">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cart_details">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2">
+                <h5>Total: <span id="total"></span></h5>
+            </div>
           </div>
         </div>
       </div>
 
-
-    </form>
     <div>
         <a class="button1" href="#/panier"><strong>Retour</strong></a>
     </div>

@@ -15,6 +15,20 @@ function add_item(id_item) {
     });
 }
 
+function add_pay(id_item){
+    $.ajax({
+        url:"/clients/" + ID_CLIENT + "/payer",
+        method: "POST",
+        data: {"idProduit": id_item, "quantite": 1},
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            $('#item_counter').text(result.items.length)
+        }
+    })
+}
+
 
 function item_to_html(item) {
     item_card = $('<div></div>')
@@ -63,6 +77,31 @@ function chargerproduit() {
 function chargerpanier() {
     $.ajax({
         url: "/clients/" + ID_CLIENT + "/panier",
+        method: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
+        },
+        success: function (result) {
+            console.log(result)
+            $("#total").text(result.valeur);
+            $.each(result.items, function (key, value) {
+
+                item = $("<tr>" +
+                    "<td>" + value.nomProduit + "</td> " +
+                    "<td>" + value.prix + "</td> " +
+                    "<td>" + value.quantite + "</td> " +
+                    "<td>" + value.prix * value.quantite + "</td> " +
+                    "</tr>");
+
+                $('#cart_details').append(item);
+            });
+        }
+    });
+}
+
+function chargerpayer(){
+    $.ajax({
+        url: "/clients/" + ID_CLIENT + "/payer",
         method: "GET",
         beforeSend: function (xhr) {
             xhr.setRequestHeader('Authorization', "Basic " + TOKEN_CLIENT);
