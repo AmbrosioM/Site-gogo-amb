@@ -118,7 +118,7 @@ function chargerpayer(){
                     "<td>" + value.prix * value.quantite + "</td> " +
                     "</tr>");
 
-                $('#cart_details').append(item);
+                $('#payment').append(item);
             });
         }
     });
